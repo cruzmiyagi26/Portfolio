@@ -7,98 +7,88 @@ type Project = {
   description: string
   image: string
   accent: "primary" | "secondary" | "chart-3"
-  fit: "cover" | "contain"
 }
 
 const projects: Project[] = [
   {
-    title: "Cloud Wolf",
-    tag: "Web / UI-UX",
+    title: "Cloud Wolf Agency Website",
+    tag: "Web Design / UI-UX",
     description:
-      "A polished creative-agency website design — bold hero branding, clean navigation, and a portfolio grid built to feel fast and confident.",
+      "A modern creative agency website featuring responsive web design, bold branding, portfolio showcases, engaging landing pages, and an intuitive UI/UX experience.",
     image: "/images/project-web.png",
     accent: "secondary",
-    fit: "cover",
   },
   {
-    title: "Cloud Vision",
-    tag: "Web / UI-UX",
+    title: "Cloud Vision Business Website",
+    tag: "Website Design / UI-UX",
     description:
-      "A polished creative-agency website design — bold hero branding, clean navigation, and a portfolio grid built to feel fast and confident.",
+      "A professional business website concept designed with clean layouts, responsive user interfaces, conversion-focused sections, and modern web design principles.",
     image: "/images/Vision.png",
     accent: "secondary",
-    fit: "cover",
   },
   {
-    title: "F1 Racing Digital Experience",
-    tag: "Concept / Motorsport",
+    title: "Formula 1 Racing Dashboard",
+    tag: "Dashboard Design / Motorsport",
     description:
-      "A fictional Formula 1 web app concept with a live racing dashboard, car telemetry, and bold speed-driven visuals.",
+      "A Formula 1 inspired dashboard featuring live race telemetry, performance analytics, dark mode UI, responsive layouts, and immersive sports web design.",
     image: "/images/project-f1.png",
     accent: "primary",
-    fit: "cover",
   },
   {
-    title: "NTF Real Estate Digital Experience",
-    tag: "Concept / Real Estate",
+    title: "NFT Real Estate Marketplace",
+    tag: "Real Estate / Web3",
     description:
-      "Pokemon type real estate NFT experienxe",
+      "A modern NFT real estate marketplace concept combining property listings, digital ownership, Web3 features, responsive design, and engaging user experiences.",
     image: "/images/RealEstate3.png",
     accent: "primary",
-    fit: "cover",
-  }, {
-    title: "Real Estate Digital Experience",
-    tag: "Concept / Real Estate",
+  },
+  {
+    title: "Real Estate Agent Website",
+    tag: "Real Estate / Website Design",
     description:
-      "Project with local Atlanta real estate agent",
+      "A responsive real estate website created for a local Atlanta real estate agent with property listings, lead generation, modern branding, and intuitive navigation.",
     image: "/images/Realestate4.png",
     accent: "primary",
-    fit: "cover",
   },
-  , {
-    title: "Zillow Digital Experience",
-    tag: "Concept / Real Estate",
+  {
+    title: "Zillow Property Platform Concept",
+    tag: "Property Search / UI-UX",
     description:
-      "local Atlanta real estate agent",
+      "A Zillow-inspired property search platform featuring interactive listings, responsive filters, map integration, modern UI, and an optimized home-buying experience.",
     image: "/images/RealEstate1.png",
     accent: "primary",
-    fit: "cover",
   },
   {
-    title: "Poke Design Game",
-    tag: "Web / Anime",
+    title: "Pokémon Fan Website",
+    tag: "Anime / Website Design",
     description:
-      "A vibrant anime website design fronted by an original Pokémon-type mascot, with a character gallery and colorful, playful layouts.",
+      "A colorful Pokémon-inspired website featuring custom illustrations, character galleries, responsive layouts, interactive sections, and engaging anime-themed UI design.",
     image: "/images/J.jpeg",
     accent: "chart-3",
-    fit: "cover",
   },
   {
-    title: "Game Portal",
-    tag: "Web / Gaming",
+    title: "Gaming Portal Experience",
+    tag: "Gaming / UI-UX",
     description:
-      "A gaming website design built around an original Pokémon-type creature mascot — HUD previews, character cards, and bold interactive energy.",
+      "A modern gaming website with interactive dashboards, character showcases, esports-inspired layouts, responsive web design, and immersive user experiences.",
     image: "/images/project-gaming.png",
     accent: "secondary",
-    fit: "cover",
   },
   {
-    title: "PayFlow",
-    tag: "Web / Fintech",
+    title: "PayFlow Fintech Platform",
+    tag: "Fintech / Dashboard",
     description:
-      "A fintech payment-service website design with a secure checkout flow, transaction dashboard, and clean, trustworthy fintech UI.",
+      "A fintech payment platform featuring secure checkout flows, financial dashboards, responsive user interfaces, transaction management, and modern banking UI design.",
     image: "/images/project-future.png",
     accent: "primary",
-    fit: "cover",
   },
   {
-    title: "Online Magazine",
-    tag: "Web / Anime",
+    title: "Anime News & Magazine",
+    tag: "News Website / Anime",
     description:
-      "Online News & Magzine for Anime Lovers",
+      "An anime news and magazine website designed with responsive layouts, featured articles, category pages, modern typography, and engaging editorial experiences.",
     image: "/images/C.jpeg",
     accent: "primary",
-    fit: "cover",
   },
 ]
 
@@ -109,62 +99,73 @@ const accentBg: Record<Project["accent"], string> = {
 }
 
 const accentPanel: Record<Project["accent"], string> = {
-  primary: "bg-primary/12",
-  secondary: "bg-secondary/15",
-  "chart-3": "bg-[var(--chart-3)]/20",
+  primary: "bg-primary/10",
+  secondary: "bg-secondary/10",
+  "chart-3": "bg-[var(--chart-3)]/15",
 }
 
 export function Projects() {
   return (
-    <section id="work" className="mx-auto max-w-6xl px-4 py-20 md:px-6">
+    <section id="work" className="mx-auto max-w-7xl px-4 py-20 md:px-6">
       <div className="mb-12 flex flex-col gap-3">
         <span className="w-fit rounded-full ink-border bg-accent px-3 py-1 text-sm font-bold">
           作品 · Selected Work
         </span>
+
         <h2 className="text-balance font-display text-3xl font-black tracking-tight md:text-5xl">
           A gallery of website designs
         </h2>
-        <p className="max-w-xl text-pretty leading-relaxed text-muted-foreground">
-          Concept website designs I created and built &mdash; exploring ideas across creative agencies, motorsport, anime, gaming, and fintech.
+
+        <p className="max-w-2xl text-pretty leading-relaxed text-muted-foreground">
+          Concept website designs exploring creative agencies, motorsport,
+          anime, gaming, fintech, and real estate experiences.
         </p>
       </div>
 
-      <div className="grid gap-8">
+      <div className="grid gap-10">
         {projects.map((p, i) => (
           <article
             key={p.title}
-            className={`group grid overflow-hidden rounded-2xl ink-border ink-shadow bg-card md:grid-cols-2 ${
+            className={`group grid overflow-hidden rounded-3xl border bg-card shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl md:grid-cols-2 ${
               i % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""
             }`}
           >
+            {/* Image */}
             <div
-              className={`relative flex items-center justify-center overflow-hidden ${
-                p.fit === "contain" ? "p-6" : ""
-              } ${accentPanel[p.accent]}`}
+              className={`relative flex items-center justify-center p-6 ${accentPanel[p.accent]}`}
             >
               <Image
-                src={p.image || "/placeholder.svg"}
-                alt={`Cover art for ${p.title}`}
-                width={640}
-                height={480}
-                className={`h-56 w-full transition-transform duration-300 group-hover:scale-105 md:h-full md:min-h-72 ${
-                  p.fit === "contain" ? "object-contain" : "object-cover"
-                }`}
+                src={p.image}
+                alt={p.title}
+                width={1600}
+                height={1000}
+                priority={i < 2}
+                className="h-[300px] w-full rounded-xl bg-white object-contain p-2 transition-transform duration-300 group-hover:scale-[1.02] md:h-[520px]"
               />
             </div>
 
-            <div className="flex flex-col justify-center gap-4 p-6 md:p-10">
-              <span className={`w-fit rounded-full px-3 py-1 text-xs font-bold ink-border ${accentBg[p.accent]}`}>
+            {/* Content */}
+            <div className="flex flex-col justify-center gap-5 p-8 md:p-12">
+              <span
+                className={`w-fit rounded-full px-3 py-1 text-xs font-bold ${accentBg[p.accent]}`}
+              >
                 {p.tag}
               </span>
-              <h3 className="font-display text-2xl font-black tracking-tight md:text-3xl">{p.title}</h3>
-              <p className="text-pretty leading-relaxed text-muted-foreground">{p.description}</p>
+
+              <h3 className="font-display text-2xl font-black tracking-tight md:text-4xl">
+                {p.title}
+              </h3>
+
+              <p className="leading-relaxed text-muted-foreground">
+                {p.description}
+              </p>
+
               <a
                 href="#contact"
-                className="mt-1 inline-flex w-fit items-center gap-1 font-bold text-primary underline-offset-4 hover:underline"
+                className="inline-flex w-fit items-center gap-2 font-semibold text-primary transition hover:gap-3"
               >
                 See the concept
-                <ArrowUpRight className="h-4 w-4" />
+                <ArrowUpRight className="h-5 w-5" />
               </a>
             </div>
           </article>
