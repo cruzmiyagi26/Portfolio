@@ -52,11 +52,11 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
             </p>
 
             <a
-              href="mailto:princeton.nelson1@gmail.com"
+              href="mailto:studio@cloudwolf.dev"
               className="mt-8 inline-flex items-center gap-2 rounded-xl border-[2.5px] border-primary-foreground bg-background px-6 py-3 font-bold text-foreground transition-transform hover:-translate-y-0.5"
             >
               <Mail className="h-5 w-5" />
-              princeton.nelson1@gmail.com
+              studio@cloudwolf.dev
             </a>
 
             <div className="mt-6 flex gap-3">
